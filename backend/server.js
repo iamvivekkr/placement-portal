@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -9,12 +10,15 @@ const fs = require("fs");
 
 //mongodb://localhost:27017/jobPortal
 mongoose
-  .connect("mongodb+srv://placementnew:Ox3KymsFZxyhJRbX@cluster0.lqhzei9.mongodb.net/placement?retryWrites=true&w=majority&appName=Cluster0", {
-    //useNewUrlParser: true,
-    //useUnifiedTopology: true,
-    //useCreateIndex: true,
-    //useFindAndModify: false,
-  })
+  .connect(
+    process.env.DATABASE,
+    {
+      //useNewUrlParser: true,
+      //useUnifiedTopology: true,
+      //useCreateIndex: true,
+      //useFindAndModify: false,
+    }
+  )
   .then((res) => console.log("Connected to DB"))
   .catch((err) => console.log(err));
 
