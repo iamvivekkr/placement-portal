@@ -3,14 +3,14 @@ import {
   Button,
   Grid,
   Typography,
-  Modal,
+  
   Paper,
   makeStyles,
   TextField,
 } from "@material-ui/core";
 import axios from "axios";
 import ChipInput from "material-ui-chip-input";
-import FileUploadInput from "../lib/FileUploadInput";
+//import FileUploadInput from "../lib/FileUploadInput";
 import DescriptionIcon from "@material-ui/icons/Description";
 import FaceIcon from "@material-ui/icons/Face";
 
@@ -276,7 +276,7 @@ const Profile = (props) => {
                   fullWidth
                 />
               </Grid>
-              <Grid item>
+              {/* <Grid item>
                 <FileUploadInput
                   className={classes.inputBox}
                   label="Resume (.pdf)"
@@ -295,7 +295,7 @@ const Profile = (props) => {
                   handleInput={handleInput}
                   identifier={"profile"}
                 />
-              </Grid>
+              </Grid> */}
             </Grid>
             <Button
               variant="contained"

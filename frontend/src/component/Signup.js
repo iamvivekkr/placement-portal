@@ -19,7 +19,7 @@ import "react-phone-input-2/lib/material.css";
 
 import PasswordInput from "../lib/PasswordInput";
 import EmailInput from "../lib/EmailInput";
-import FileUploadInput from "../lib/FileUploadInput";
+//import FileUploadInput from "../lib/FileUploadInput";
 import { SetPopupContext } from "../App";
 
 import apiList from "../lib/apiList";
@@ -408,7 +408,8 @@ const Login = (props) => {
                 }
               />
             </Grid>
-            <Grid item>
+            
+            {/* <Grid item>
               <FileUploadInput
                 className={classes.inputBox}
                 label="Resume (.pdf)"
@@ -441,7 +442,7 @@ const Login = (props) => {
                 handleInput={handleInput}
                 identifier={"profile"}
               />
-            </Grid>
+            </Grid> */}
           </>
         ) : (
           <>

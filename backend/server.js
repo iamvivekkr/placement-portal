@@ -23,15 +23,15 @@ mongoose
   .catch((err) => console.log(err));
 
 // initialising directories
-if (!fs.existsSync("./public")) {
-  fs.mkdirSync("./public");
-}
-if (!fs.existsSync("./public/resume")) {
-  fs.mkdirSync("./public/resume");
-}
-if (!fs.existsSync("./public/profile")) {
-  fs.mkdirSync("./public/profile");
-}
+// if (!fs.existsSync("./public")) {
+//   fs.mkdirSync("./public");
+// }
+// if (!fs.existsSync("./public/resume")) {
+//   fs.mkdirSync("./public/resume");
+// }
+// if (!fs.existsSync("./public/profile")) {
+//   fs.mkdirSync("./public/profile");
+// }
 
 const app = express();
 const port = 5000;
@@ -47,8 +47,8 @@ app.use(passportConfig.initialize());
 // Routing
 app.use("/auth", require("./routes/authRoutes"));
 app.use("/api", require("./routes/apiRoutes"));
-app.use("/upload", require("./routes/uploadRoutes"));
-app.use("/host", require("./routes/downloadRoutes"));
+// app.use("/upload", require("./routes/uploadRoutes"));
+// app.use("/host", require("./routes/downloadRoutes"));
 
 app.listen(port, () => {
   console.log(`Server started on port ${port}!`);
